@@ -28,6 +28,7 @@ struct AddTodoView: View {
                     DatePicker(
                         "Due date",
                         selection: $scheduledDate,
+                        in: Date()...,
                         displayedComponents: .date
                     )
 #if os(iOS)

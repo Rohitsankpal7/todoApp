@@ -10,6 +10,7 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
+    @Environment(\.colorScheme) private var colorScheme
     @Query(sort: [
         SortDescriptor(\TodoItem.scheduledDate, order: .reverse),
         SortDescriptor(\TodoItem.createdAt, order: .reverse)
@@ -17,6 +18,8 @@ struct ContentView: View {
     private var items: [TodoItem]
 
     @State private var isPresentingAddSheet = false
+    @State private var confettiSeed: UInt64 = 0
+    @State private var confettiStartDate: Date?
 
     var body: some View {
         NavigationStack {
@@ -45,7 +48,7 @@ struct ContentView: View {
             .listStyle(.sidebar)
 #endif
             .scrollContentBackground(.hidden)
-            .background(AppTheme.backgroundGradient)
+            .background(AppTheme.backgroundGradient(for: colorScheme))
             .navigationTitle("My Todos")
             .toolbar {
 #if os(iOS)
@@ -64,6 +67,20 @@ struct ContentView: View {
             .sheet(isPresented: $isPresentingAddSheet) {
                 AddTodoView { title, notes, scheduledDate in
                     addItem(title: title, notes: notes, scheduledDate: scheduledDate)
+                }
+            }
+        }
+        .overlay(alignment: .bottom) {
+            Group {
+                if let startDate = confettiStartDate {
+                    ConfettiBurstView(
+                        config: .init(duration: 1.2, particleCount: 80),
+                        seed: confettiSeed,
+                        startDate: startDate
+                    )
+                    .transition(.opacity)
+                } else {
+                    EmptyView()
                 }
             }
         }
@@ -101,6 +118,22 @@ struct ContentView: View {
         withAnimation {
             item.isCompleted.toggle()
             item.updatedAt = Date()
+        }
+
+        if item.isCompleted {
+            playCompletionConfetti()
+        }
+    }
+
+    private func playCompletionConfetti() {
+        confettiSeed &+= 1
+        confettiStartDate = Date()
+
+        let duration: TimeInterval = 1.2
+        DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+            withAnimation(.easeOut(duration: 0.2)) {
+                confettiStartDate = nil
+            }
         }
     }
 }

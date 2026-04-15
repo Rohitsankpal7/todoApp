@@ -1,0 +1,19 @@
+{
+  "" : {
+    "diagnostics" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosTests.build/Objects-normal/arm64/ToDosTests-primary.dia",
+    "emit-module-dependencies" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosTests.build/Objects-normal/arm64/ToDosTests-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosTests.build/Objects-normal/arm64/ToDosTests-primary-emit-module.dia",
+    "pch" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosTests.build/Objects-normal/arm64/ToDosTests-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosTests.build/Objects-normal/arm64/ToDosTests-primary.swiftdeps"
+  },
+  "/Users/rohitsankpal/Documents/Projects/ToDos/ToDosTests/ToDosTests.swift" : {
+    "const-values" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosTests.build/Objects-normal/arm64/ToDosTests.swiftconstvalues",
+    "dependencies" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosTests.build/Objects-normal/arm64/ToDosTests.d",
+    "diagnostics" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosTests.build/Objects-normal/arm64/ToDosTests.dia",
+    "index-unit-output-path" : "/ToDos.build/Debug/ToDosTests.build/Objects-normal/arm64/ToDosTests.o",
+    "llvm-bc" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosTests.build/Objects-normal/arm64/ToDosTests.bc",
+    "object" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosTests.build/Objects-normal/arm64/ToDosTests.o",
+    "swift-dependencies" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosTests.build/Objects-normal/arm64/ToDosTests.swiftdeps",
+    "swiftmodule" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosTests.build/Objects-normal/arm64/ToDosTests~partial.swiftmodule"
+  }
+}

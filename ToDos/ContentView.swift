@@ -10,71 +10,102 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @Query(sort: [
+        SortDescriptor(\TodoItem.scheduledDate, order: .reverse),
+        SortDescriptor(\TodoItem.createdAt, order: .reverse)
+    ])
+    private var items: [TodoItem]
+
+    @State private var isPresentingAddSheet = false
 
     var body: some View {
-        NavigationViewWrapper {
+        NavigationStack {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                if items.isEmpty {
+                    EmptyStateView()
+                        .listRowBackground(Color.clear)
+                } else {
+                    ForEach(groupedItems) { section in
+                        Section(section.title) {
+                            ForEach(section.items) { item in
+                                TodoRow(item: item) {
+                                    toggleCompletion(for: item)
+                                }
+                            }
+                            .onDelete { offsets in
+                                deleteItems(offsets: offsets, from: section.items)
+                            }
+                        }
                     }
                 }
-                .onDelete(perform: deleteItems)
             }
-#if os(macOS)
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
+#if os(iOS)
+            .listStyle(.insetGrouped)
+#else
+            .listStyle(.sidebar)
 #endif
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.backgroundGradient)
+            .navigationTitle("My Todos")
             .toolbar {
 #if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .topBarLeading) {
                     EditButton()
                 }
+                ToolbarItem(placement: .topBarTrailing) {
+                    addTodoToolbarButton
+                }
+#else
+                ToolbarItem(placement: .primaryAction) {
+                    addTodoToolbarButton
+                }
 #endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+            }
+            .sheet(isPresented: $isPresentingAddSheet) {
+                AddTodoView { title, notes, scheduledDate in
+                    addItem(title: title, notes: notes, scheduledDate: scheduledDate)
                 }
             }
         }
     }
 
-    private func addItem() {
+    private var addTodoToolbarButton: some View {
+        Button {
+            isPresentingAddSheet = true
+        } label: {
+            Label("Add Todo", systemImage: "plus.circle.fill")
+        }
+    }
+
+    private var groupedItems: [TodoSection] {
+        TodoGrouping.groupedSections(from: items)
+    }
+
+    private func addItem(title: String, notes: String, scheduledDate: Date) {
         withAnimation {
-            let newItem = Item(timestamp: Date())
+            let day = Calendar.current.startOfDay(for: scheduledDate)
+            let newItem = TodoItem(title: title, notes: notes, scheduledDate: day)
             modelContext.insert(newItem)
         }
     }
 
-    private func deleteItems(offsets: IndexSet) {
+    private func deleteItems(offsets: IndexSet, from sectionItems: [TodoItem]) {
         withAnimation {
             for index in offsets {
-                modelContext.delete(items[index])
+                modelContext.delete(sectionItems[index])
             }
         }
     }
-}
 
-fileprivate struct NavigationViewWrapper<Content: View>: View {
-    let content: () -> Content
-
-    var body: some View {
-#if os(macOS)
-        NavigationSplitView {
-            content()
-        } detail: {
-            Text("Select an item")
+    private func toggleCompletion(for item: TodoItem) {
+        withAnimation {
+            item.isCompleted.toggle()
+            item.updatedAt = Date()
         }
-#else
-        content()
-#endif
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: TodoItem.self, inMemory: true)
 }

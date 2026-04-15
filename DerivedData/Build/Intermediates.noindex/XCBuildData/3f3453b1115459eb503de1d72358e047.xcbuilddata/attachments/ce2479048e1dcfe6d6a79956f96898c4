@@ -1,0 +1,29 @@
+{
+  "" : {
+    "diagnostics" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITests-primary.dia",
+    "emit-module-dependencies" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITests-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITests-primary-emit-module.dia",
+    "pch" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITests-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITests-primary.swiftdeps"
+  },
+  "/Users/rohitsankpal/Documents/Projects/ToDos/ToDosUITests/ToDosUITests.swift" : {
+    "const-values" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITests.swiftconstvalues",
+    "dependencies" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITests.d",
+    "diagnostics" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITests.dia",
+    "index-unit-output-path" : "/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITests.o",
+    "llvm-bc" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITests.bc",
+    "object" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITests.o",
+    "swift-dependencies" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITests.swiftdeps",
+    "swiftmodule" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITests~partial.swiftmodule"
+  },
+  "/Users/rohitsankpal/Documents/Projects/ToDos/ToDosUITests/ToDosUITestsLaunchTests.swift" : {
+    "const-values" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITestsLaunchTests.swiftconstvalues",
+    "dependencies" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITestsLaunchTests.d",
+    "diagnostics" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITestsLaunchTests.dia",
+    "index-unit-output-path" : "/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITestsLaunchTests.o",
+    "llvm-bc" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITestsLaunchTests.bc",
+    "object" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITestsLaunchTests.o",
+    "swift-dependencies" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITestsLaunchTests.swiftdeps",
+    "swiftmodule" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/ToDos.build/Debug/ToDosUITests.build/Objects-normal/arm64/ToDosUITestsLaunchTests~partial.swiftmodule"
+  }
+}

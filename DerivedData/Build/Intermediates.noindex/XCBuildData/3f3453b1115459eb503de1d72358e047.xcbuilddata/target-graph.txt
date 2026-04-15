@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+Target 'ToDosTests' in project 'ToDos'
+➜ Explicit dependency on target 'ToDos' in project 'ToDos'
+Target 'ToDosUITests' in project 'ToDos'
+➜ Explicit dependency on target 'ToDos' in project 'ToDos'
+Target 'ToDos' in project 'ToDos' (no dependencies)

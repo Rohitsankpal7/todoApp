@@ -1,0 +1,72 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildAndRun"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "1dd5b761d7bdd23b431b326a217650efdf64ebcd6cd6d01db8b782e3b456a252"
+    },
+    {
+      "guid" : "1dd5b761d7bdd23b431b326a217650ef02f8d8c87a228d699354cbc4b9ac2aff"
+    },
+    {
+      "guid" : "1dd5b761d7bdd23b431b326a217650eff9780b698d0feb0ddc5f36359d2c4f22"
+    }
+  ],
+  "containerPath" : "/Users/rohitsankpal/Documents/Projects/ToDos/ToDos.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "hostTargetedPlatform" : null,
+      "platform" : "macosx",
+      "sdk" : "macosx26.4",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Products",
+      "derivedDataPath" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "CLANG_COVERAGE_MAPPING" : "YES",
+          "CLANG_PROFILE_DATA_DIRECTORY" : "/Users/rohitsankpal/Documents/Projects/ToDos/DerivedData/Build/ProfileData",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "YES",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "test",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
